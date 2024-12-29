@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wypożyczalnia Samochodów</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <h1>Wypożyczalnia Samochodów</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Samochody</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>Witamy w naszej wypożyczalni samochodów!</h2>
+        <p>Oferujemy wypożyczenie samochodów 9-osobowych na dzień lub dłuższy okres.</p>
+    </section>
+    <section id="cars">
+        <h2>Nasze Samochody</h2>
+        <div id="carList">
+            <!-- Przykładowy samochód -->
+            <div class="car">
+                <h3>Ford Transit</h3>
+                <p>9-osobowy</p>
+                <p>Cena za dzień: 250 PLN netto + 23% VAT</p>
+                <button onclick="openReservationForm('Ford Transit')">Rezerwuj</button>
+            </div>
+        </div>
+    </section>
+    <section id="reservation">
+        <h2>Rezerwacja</h2>
+        <form id="reservationForm">
+            <label for="car">Samochód:</label>
+            <input type="text" id="car" name="car" readonly>
+            <label for="startDate">Data rozpoczęcia:</label>
+            <input type="text" id="startDate" name="startDate" required>
+            <label for="endDate">Data zakończenia:</label>
+            <input type="text" id="endDate" name="endDate" required>
+            <label for="days">Liczba dni:</label>
+            <input type="number" id="days" name="days" readonly>
+            <label for="totalCostNet">Całkowity koszt netto (PLN):</label>
+            <input type="text" id="totalCostNet" name="totalCostNet" readonly>
+            <label for="totalCostGross">Całkowity koszt brutto (PLN):</label>
+            <input type="text" id="totalCostGross" name="totalCostGross" readonly>
+            <button type="submit">Rezerwuj</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form id="contactForm">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Wypożyczalnia Samochodów</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
